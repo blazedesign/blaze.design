@@ -2,10 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="software & visuals">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>blaze.design</title>
+  <script src="https://kit.fontawesome.com/a95c2fa36e.js" crossorigin="anonymous"></script>
+  <style>
+     /** imports **/
+     @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Rethink+Sans:wght@400;700&display=swap');
+    
+    /** variables **/
+    :root {
+      --color-dark: #383350;
+      --color-light: #c3b0ff;
+      --font-family: "Rethink Sans", sans-serif;
+    }
+
+    /** reset **/
+    *,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    /** defaults **/
+    body {
+      line-height: 1em;
+      font-family: var(--font-family);
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+
+    a {
+      color: white;
+    }
+    a:hover,
+    a:active {
+      color: white;
+      text-decoration: none;
+    }
+
+    /** layout **/
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+      gap: 2rem;
+      height: 100vh;
+      max-height: -webkit-fill-available; /** Safari bottom nav fix **/
+    }
+
+    /** typography **/
+    h1 {
+      font-weight: 400;
+    }
+
+    p {
+      line-height: 1.4em;
+    }
+
+    /** media queries **/
+    @media only screen and (max-width: 600px) {
+      main {
+        padding: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main>
+    <h1><i class="fa-solid fa-arrow-pointer"></i> blaze.design</h1>
+    <p>
+      software & visuals
+      <br>
+      currently designing <a href="http://party.app" target="_blank">party.app</a> at PartyDAO
+      <br>
+      &mdash;
+      <br>
+      previously worked at <a href="http://showtime.xyz" target="_blank">showtime.xyz</a>, <a href="http://workos.com" target="_blank">workos.com</a>, <a href="http://commercejs.com" target="_blank">commerce.js</a>, & more
+    </p>
+    <p><a href="http://x.com/0xblz" target="_blank">@0xblz</a></p>
+  </main>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-355V4GHGSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-355V4GHGSF');
+  </script>
 </body>
 </html>
