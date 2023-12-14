@@ -12,8 +12,10 @@
     
     /** variables **/
     :root {
-      --color-dark: #383350;
-      --color-light: #c3b0ff;
+      --color-primary: #ff3995;
+      --color-secondary: #383350;
+      --color-light: rgba(255,255,255,0.75);
+      --color-lighter: rgba(255,255,255,0.25);
       --font-family: "Rethink Sans", sans-serif;
     }
 
@@ -28,8 +30,13 @@
     body {
       line-height: 1em;
       font-family: var(--font-family);
-      background-color: var(--color-dark);
       color: var(--color-light);
+      background-color: var(--color-secondary);
+    }
+
+    ::selection {
+      color: white;
+      background-color: var(--color-lighter);
     }
 
     a {
@@ -37,7 +44,7 @@
     }
     a:hover,
     a:active {
-      color: white;
+      color: var(--color-primary);
       text-decoration: none;
     }
 
@@ -46,6 +53,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      align-items: flex-start;
       padding: 3rem;
       gap: 2rem;
       height: 100vh;
@@ -55,6 +63,8 @@
     /** typography **/
     h1 {
       font-weight: 400;
+      font-size: 1.4rem;
+      color: white;
     }
 
     p {
@@ -62,9 +72,28 @@
     }
 
     /** media queries **/
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-height: 300px) { /** landscape **/
+      main {
+        justify-content: flex-start;
+        padding: 1rem;
+        height: auto;
+        max-height: initial;
+      }
+    }
+    @media only screen and (max-width: 600px) { /** mobile **/
       main {
         padding: 2rem;
+      }
+    }
+    @media only screen and (max-width: 200px) { /** xs **/
+      body {
+        font-size: 0.85rem;
+      }
+      main {
+        padding: 0.75rem;
+      }
+      h1 {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -73,7 +102,7 @@
   <main>
     <h1><i class="fa-solid fa-arrow-pointer"></i> blaze.design</h1>
     <p>
-      software & visuals
+      <strong>software & visuals</strong>
       <br>
       currently designing <a href="http://party.app" target="_blank">party.app</a> at PartyDAO
       <br>
